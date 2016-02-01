@@ -12,6 +12,10 @@
 		71C2E38A1C5F7C33005F17B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71C2E3881C5F7C33005F17B0 /* Main.storyboard */; };
 		71C2E38C1C5F7C33005F17B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71C2E38B1C5F7C33005F17B0 /* Assets.xcassets */; };
 		71C2E38F1C5F7C33005F17B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71C2E38D1C5F7C33005F17B0 /* LaunchScreen.storyboard */; };
+		71C2E3971C5F7C5D005F17B0 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71C2E3961C5F7C5D005F17B0 /* Accounts.framework */; };
+		71C2E3991C5F7C63005F17B0 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71C2E3981C5F7C63005F17B0 /* Social.framework */; };
+		71C2E39C1C5F7CA4005F17B0 /* TFTwitterAccessManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C2E39B1C5F7CA4005F17B0 /* TFTwitterAccessManager.swift */; };
+		71C2E39F1C5FD037005F17B0 /* TFFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C2E39E1C5FD037005F17B0 /* TFFeed.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		71C2E38B1C5F7C33005F17B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		71C2E38E1C5F7C33005F17B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		71C2E3901C5F7C33005F17B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		71C2E3961C5F7C5D005F17B0 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		71C2E3981C5F7C63005F17B0 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		71C2E39B1C5F7CA4005F17B0 /* TFTwitterAccessManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TFTwitterAccessManager.swift; path = Managers/TFTwitterAccessManager.swift; sourceTree = "<group>"; };
+		71C2E39E1C5FD037005F17B0 /* TFFeed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TFFeed.swift; path = Model/TFFeed.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +37,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71C2E3991C5F7C63005F17B0 /* Social.framework in Frameworks */,
+				71C2E3971C5F7C5D005F17B0 /* Accounts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +48,8 @@
 		71C2E3781C5F7C33005F17B0 = {
 			isa = PBXGroup;
 			children = (
+				71C2E3981C5F7C63005F17B0 /* Social.framework */,
+				71C2E3961C5F7C5D005F17B0 /* Accounts.framework */,
 				71C2E3831C5F7C33005F17B0 /* TwitterFeed */,
 				71C2E3821C5F7C33005F17B0 /* Products */,
 			);
@@ -54,6 +66,8 @@
 		71C2E3831C5F7C33005F17B0 /* TwitterFeed */ = {
 			isa = PBXGroup;
 			children = (
+				71C2E39D1C5FD000005F17B0 /* Model */,
+				71C2E39A1C5F7C6E005F17B0 /* Managers */,
 				71C2E3841C5F7C33005F17B0 /* AppDelegate.swift */,
 				71C2E3861C5F7C33005F17B0 /* ViewController.swift */,
 				71C2E3881C5F7C33005F17B0 /* Main.storyboard */,
@@ -62,6 +76,22 @@
 				71C2E3901C5F7C33005F17B0 /* Info.plist */,
 			);
 			path = TwitterFeed;
+			sourceTree = "<group>";
+		};
+		71C2E39A1C5F7C6E005F17B0 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				71C2E39B1C5F7CA4005F17B0 /* TFTwitterAccessManager.swift */,
+			);
+			name = Managers;
+			sourceTree = "<group>";
+		};
+		71C2E39D1C5FD000005F17B0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				71C2E39E1C5FD037005F17B0 /* TFFeed.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,6 +165,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71C2E39C1C5F7CA4005F17B0 /* TFTwitterAccessManager.swift in Sources */,
+				71C2E39F1C5FD037005F17B0 /* TFFeed.swift in Sources */,
 				71C2E3871C5F7C33005F17B0 /* ViewController.swift in Sources */,
 				71C2E3851C5F7C33005F17B0 /* AppDelegate.swift in Sources */,
 			);
