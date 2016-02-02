@@ -122,5 +122,9 @@ class ViewController: UIViewController {
     @IBAction func refreshTapped(sender: UIButton) {
         updateData()
     }
+    
+    @IBAction func tweetListViewStyleChanged(sender: UISegmentedControl) {
+        tweetListView.style = TFTweetsCollectionViewStyle(rawValue: sender.selectedSegmentIndex)!
+    }
 }
 

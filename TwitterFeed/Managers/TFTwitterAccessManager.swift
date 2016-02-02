@@ -68,7 +68,7 @@ class TFTwitterAccessManager {
         
         let url = NSURL(string: "https://api.twitter.com/1.1/statuses/home_timeline.json")
         
-        let params = ["count": "50", "screen_name": account.accountDescription]
+        let params = ["count": "100", "screen_name": account.accountDescription]
         
         let request = SLRequest(forServiceType: SLServiceTypeTwitter, requestMethod: .GET, URL: url, parameters: params)
         
