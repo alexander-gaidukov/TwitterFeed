@@ -30,13 +30,11 @@ class TFTweet {
             }
         }
         
-        if let entities = params["entities"] as? NSDictionary {
-            if let medias = entities["media"] as? NSArray {
-                for media in medias {
-                    if let mediaParams = media as? NSDictionary {
-                        if mediaParams["type"] as? String == "photo" { // We show only images
-                            self.photo = TFTweetPhoto(params: mediaParams)
-                        }
+        if let medias = params["entities"]?["media"] as? NSArray {
+            for media in medias {
+                if let mediaParams = media as? NSDictionary {
+                    if mediaParams["type"] as? String == "photo" { // We show only images
+                        self.photo = TFTweetPhoto(params: mediaParams)
                     }
                 }
             }

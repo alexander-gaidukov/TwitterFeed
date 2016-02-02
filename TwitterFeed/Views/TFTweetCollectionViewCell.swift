@@ -73,13 +73,6 @@ class TFTweetCollectionViewCell: UICollectionViewCell {
         layoutIfNeeded()
     }
     
-    private func imageHeight(forImage image: UIImage, withWidth width: CGFloat) -> CGFloat {
-        
-        let ratio = image.size.width / image.size.height
-        
-        return width / ratio
-    }
-    
     func heightForTweet(tweet: TFTweet) -> CGFloat {
         setup(tweet)
         

@@ -14,6 +14,9 @@ class TFTwitterAccessManager {
     
     var account: ACAccount! {
         didSet {
+            
+            // Save choosen account in case if user has more than 1 account
+            
             NSUserDefaults.standardUserDefaults().setObject(account.identifier, forKey: selectedTwitterAccount)
             NSUserDefaults.standardUserDefaults().synchronize()
         }
@@ -35,22 +38,18 @@ class TFTwitterAccessManager {
             
             if granted {
                 
-                let accounts = self.accountStore.accountsWithAccountType(twitterAccountType)
+                let twitterAccounts = self.accountStore.accountsWithAccountType(twitterAccountType) as! [ACAccount]
                 
-                if let twitterAccounts = accounts as? [ACAccount] {
-                    if twitterAccounts.count > 1 {
-                        if let identifier = NSUserDefaults.standardUserDefaults().objectForKey(self.selectedTwitterAccount) as? String, let account = self.accountStore.accountWithIdentifier(identifier) { // Remember if user already choose one
-
-                            complition(accounts: [account], error: nil)
-                            
-                        } else {
-                            complition(accounts: twitterAccounts, error: nil)
-                        }
+                if twitterAccounts.count > 1 {
+                    if let identifier = NSUserDefaults.standardUserDefaults().objectForKey(self.selectedTwitterAccount) as? String, let account = self.accountStore.accountWithIdentifier(identifier) { // Remember if user already choose one
+                        
+                        complition(accounts: [account], error: nil)
+                        
                     } else {
                         complition(accounts: twitterAccounts, error: nil)
                     }
                 } else {
-                    complition(accounts: [], error: nil)
+                    complition(accounts: twitterAccounts, error: nil)
                 }
                 
             } else {
