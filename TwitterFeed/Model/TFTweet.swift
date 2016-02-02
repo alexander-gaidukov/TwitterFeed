@@ -1,13 +1,13 @@
 import Foundation
 
 
-class TFFeed {
+class TFTweet {
     
     var userName: String!
     
     var postedAt: NSDate!
     
-    var imageURL: String?
+    var photo: TFTweetPhoto?
     
     var text: String!
     
@@ -35,9 +35,7 @@ class TFFeed {
                 for media in medias {
                     if let mediaParams = media as? NSDictionary {
                         if mediaParams["type"] as? String == "photo" { // We show only images
-                            if let imageURL = mediaParams["media_url"] as? String {
-                                self.imageURL = imageURL
-                            }
+                            self.photo = TFTweetPhoto(params: mediaParams)
                         }
                     }
                 }

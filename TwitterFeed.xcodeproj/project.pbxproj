@@ -15,7 +15,23 @@
 		71C2E3971C5F7C5D005F17B0 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71C2E3961C5F7C5D005F17B0 /* Accounts.framework */; };
 		71C2E3991C5F7C63005F17B0 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71C2E3981C5F7C63005F17B0 /* Social.framework */; };
 		71C2E39C1C5F7CA4005F17B0 /* TFTwitterAccessManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C2E39B1C5F7CA4005F17B0 /* TFTwitterAccessManager.swift */; };
-		71C2E39F1C5FD037005F17B0 /* TFFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C2E39E1C5FD037005F17B0 /* TFFeed.swift */; };
+		71C2E39F1C5FD037005F17B0 /* TFTweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C2E39E1C5FD037005F17B0 /* TFTweet.swift */; };
+		71C2E3B11C60CB0F005F17B0 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C2E3A41C60CB0F005F17B0 /* Image.swift */; };
+		71C2E3B21C60CB0F005F17B0 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C2E3A51C60CB0F005F17B0 /* ImageCache.swift */; };
+		71C2E3B31C60CB0F005F17B0 /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C2E3A61C60CB0F005F17B0 /* ImageDownloader.swift */; };
+		71C2E3B41C60CB0F005F17B0 /* ImageTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C2E3A71C60CB0F005F17B0 /* ImageTransition.swift */; };
+		71C2E3B51C60CB0F005F17B0 /* ImageView+Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C2E3A81C60CB0F005F17B0 /* ImageView+Kingfisher.swift */; };
+		71C2E3B61C60CB0F005F17B0 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 71C2E3A91C60CB0F005F17B0 /* Info.plist */; };
+		71C2E3B71C60CB0F005F17B0 /* KingfisherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C2E3AB1C60CB0F005F17B0 /* KingfisherManager.swift */; };
+		71C2E3B81C60CB0F005F17B0 /* KingfisherOptionsInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C2E3AC1C60CB0F005F17B0 /* KingfisherOptionsInfo.swift */; };
+		71C2E3B91C60CB0F005F17B0 /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C2E3AD1C60CB0F005F17B0 /* Resource.swift */; };
+		71C2E3BA1C60CB0F005F17B0 /* String+MD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C2E3AE1C60CB0F005F17B0 /* String+MD5.swift */; };
+		71C2E3BB1C60CB0F005F17B0 /* ThreadHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C2E3AF1C60CB0F005F17B0 /* ThreadHelper.swift */; };
+		71C2E3BC1C60CB0F005F17B0 /* UIButton+Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C2E3B01C60CB0F005F17B0 /* UIButton+Kingfisher.swift */; };
+		71C2E3C11C60CB73005F17B0 /* TFTweetCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C2E3C01C60CB73005F17B0 /* TFTweetCollectionViewCell.swift */; };
+		71C2E3C31C60CE10005F17B0 /* TFTweetsCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C2E3C21C60CE10005F17B0 /* TFTweetsCollectionView.swift */; };
+		71C2E3C51C60D7EB005F17B0 /* TFTweetCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71C2E3C41C60D7EB005F17B0 /* TFTweetCollectionViewCell.xib */; };
+		71C2E3C71C60E271005F17B0 /* TFTweetPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C2E3C61C60E271005F17B0 /* TFTweetPhoto.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +45,24 @@
 		71C2E3961C5F7C5D005F17B0 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		71C2E3981C5F7C63005F17B0 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		71C2E39B1C5F7CA4005F17B0 /* TFTwitterAccessManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TFTwitterAccessManager.swift; path = Managers/TFTwitterAccessManager.swift; sourceTree = "<group>"; };
-		71C2E39E1C5FD037005F17B0 /* TFFeed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TFFeed.swift; path = Model/TFFeed.swift; sourceTree = "<group>"; };
+		71C2E39E1C5FD037005F17B0 /* TFTweet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TFTweet.swift; path = Model/TFTweet.swift; sourceTree = "<group>"; };
+		71C2E3A41C60CB0F005F17B0 /* Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Image.swift; path = Libraries/Kingfisher/Image.swift; sourceTree = "<group>"; };
+		71C2E3A51C60CB0F005F17B0 /* ImageCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageCache.swift; path = Libraries/Kingfisher/ImageCache.swift; sourceTree = "<group>"; };
+		71C2E3A61C60CB0F005F17B0 /* ImageDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageDownloader.swift; path = Libraries/Kingfisher/ImageDownloader.swift; sourceTree = "<group>"; };
+		71C2E3A71C60CB0F005F17B0 /* ImageTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageTransition.swift; path = Libraries/Kingfisher/ImageTransition.swift; sourceTree = "<group>"; };
+		71C2E3A81C60CB0F005F17B0 /* ImageView+Kingfisher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "ImageView+Kingfisher.swift"; path = "Libraries/Kingfisher/ImageView+Kingfisher.swift"; sourceTree = "<group>"; };
+		71C2E3A91C60CB0F005F17B0 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Libraries/Kingfisher/Info.plist; sourceTree = "<group>"; };
+		71C2E3AA1C60CB0F005F17B0 /* Kingfisher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Kingfisher.h; path = Libraries/Kingfisher/Kingfisher.h; sourceTree = "<group>"; };
+		71C2E3AB1C60CB0F005F17B0 /* KingfisherManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KingfisherManager.swift; path = Libraries/Kingfisher/KingfisherManager.swift; sourceTree = "<group>"; };
+		71C2E3AC1C60CB0F005F17B0 /* KingfisherOptionsInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KingfisherOptionsInfo.swift; path = Libraries/Kingfisher/KingfisherOptionsInfo.swift; sourceTree = "<group>"; };
+		71C2E3AD1C60CB0F005F17B0 /* Resource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Resource.swift; path = Libraries/Kingfisher/Resource.swift; sourceTree = "<group>"; };
+		71C2E3AE1C60CB0F005F17B0 /* String+MD5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+MD5.swift"; path = "Libraries/Kingfisher/String+MD5.swift"; sourceTree = "<group>"; };
+		71C2E3AF1C60CB0F005F17B0 /* ThreadHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ThreadHelper.swift; path = Libraries/Kingfisher/ThreadHelper.swift; sourceTree = "<group>"; };
+		71C2E3B01C60CB0F005F17B0 /* UIButton+Kingfisher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIButton+Kingfisher.swift"; path = "Libraries/Kingfisher/UIButton+Kingfisher.swift"; sourceTree = "<group>"; };
+		71C2E3C01C60CB73005F17B0 /* TFTweetCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TFTweetCollectionViewCell.swift; path = Views/TFTweetCollectionViewCell.swift; sourceTree = "<group>"; };
+		71C2E3C21C60CE10005F17B0 /* TFTweetsCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TFTweetsCollectionView.swift; path = Views/TFTweetsCollectionView.swift; sourceTree = "<group>"; };
+		71C2E3C41C60D7EB005F17B0 /* TFTweetCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TFTweetCollectionViewCell.xib; sourceTree = "<group>"; };
+		71C2E3C61C60E271005F17B0 /* TFTweetPhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TFTweetPhoto.swift; path = Model/TFTweetPhoto.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,8 +99,10 @@
 		71C2E3831C5F7C33005F17B0 /* TwitterFeed */ = {
 			isa = PBXGroup;
 			children = (
+				71C2E3A21C60CAA6005F17B0 /* Libraries */,
 				71C2E39D1C5FD000005F17B0 /* Model */,
 				71C2E39A1C5F7C6E005F17B0 /* Managers */,
+				71C2E3BD1C60CB28005F17B0 /* Views */,
 				71C2E3841C5F7C33005F17B0 /* AppDelegate.swift */,
 				71C2E3861C5F7C33005F17B0 /* ViewController.swift */,
 				71C2E3881C5F7C33005F17B0 /* Main.storyboard */,
@@ -89,9 +124,48 @@
 		71C2E39D1C5FD000005F17B0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				71C2E39E1C5FD037005F17B0 /* TFFeed.swift */,
+				71C2E39E1C5FD037005F17B0 /* TFTweet.swift */,
+				71C2E3C61C60E271005F17B0 /* TFTweetPhoto.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		71C2E3A21C60CAA6005F17B0 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				71C2E3A31C60CAAE005F17B0 /* Kingfisher */,
+			);
+			name = Libraries;
+			sourceTree = "<group>";
+		};
+		71C2E3A31C60CAAE005F17B0 /* Kingfisher */ = {
+			isa = PBXGroup;
+			children = (
+				71C2E3A41C60CB0F005F17B0 /* Image.swift */,
+				71C2E3A51C60CB0F005F17B0 /* ImageCache.swift */,
+				71C2E3A61C60CB0F005F17B0 /* ImageDownloader.swift */,
+				71C2E3A71C60CB0F005F17B0 /* ImageTransition.swift */,
+				71C2E3A81C60CB0F005F17B0 /* ImageView+Kingfisher.swift */,
+				71C2E3A91C60CB0F005F17B0 /* Info.plist */,
+				71C2E3AA1C60CB0F005F17B0 /* Kingfisher.h */,
+				71C2E3AB1C60CB0F005F17B0 /* KingfisherManager.swift */,
+				71C2E3AC1C60CB0F005F17B0 /* KingfisherOptionsInfo.swift */,
+				71C2E3AD1C60CB0F005F17B0 /* Resource.swift */,
+				71C2E3AE1C60CB0F005F17B0 /* String+MD5.swift */,
+				71C2E3AF1C60CB0F005F17B0 /* ThreadHelper.swift */,
+				71C2E3B01C60CB0F005F17B0 /* UIButton+Kingfisher.swift */,
+			);
+			name = Kingfisher;
+			sourceTree = "<group>";
+		};
+		71C2E3BD1C60CB28005F17B0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				71C2E3C01C60CB73005F17B0 /* TFTweetCollectionViewCell.swift */,
+				71C2E3C41C60D7EB005F17B0 /* TFTweetCollectionViewCell.xib */,
+				71C2E3C21C60CE10005F17B0 /* TFTweetsCollectionView.swift */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,9 +226,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71C2E3C51C60D7EB005F17B0 /* TFTweetCollectionViewCell.xib in Resources */,
 				71C2E38F1C5F7C33005F17B0 /* LaunchScreen.storyboard in Resources */,
 				71C2E38C1C5F7C33005F17B0 /* Assets.xcassets in Resources */,
 				71C2E38A1C5F7C33005F17B0 /* Main.storyboard in Resources */,
+				71C2E3B61C60CB0F005F17B0 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -165,10 +241,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71C2E3BA1C60CB0F005F17B0 /* String+MD5.swift in Sources */,
+				71C2E3B21C60CB0F005F17B0 /* ImageCache.swift in Sources */,
 				71C2E39C1C5F7CA4005F17B0 /* TFTwitterAccessManager.swift in Sources */,
-				71C2E39F1C5FD037005F17B0 /* TFFeed.swift in Sources */,
+				71C2E3C11C60CB73005F17B0 /* TFTweetCollectionViewCell.swift in Sources */,
+				71C2E3C71C60E271005F17B0 /* TFTweetPhoto.swift in Sources */,
+				71C2E3B31C60CB0F005F17B0 /* ImageDownloader.swift in Sources */,
+				71C2E3B81C60CB0F005F17B0 /* KingfisherOptionsInfo.swift in Sources */,
+				71C2E3B71C60CB0F005F17B0 /* KingfisherManager.swift in Sources */,
+				71C2E39F1C5FD037005F17B0 /* TFTweet.swift in Sources */,
 				71C2E3871C5F7C33005F17B0 /* ViewController.swift in Sources */,
 				71C2E3851C5F7C33005F17B0 /* AppDelegate.swift in Sources */,
+				71C2E3BB1C60CB0F005F17B0 /* ThreadHelper.swift in Sources */,
+				71C2E3C31C60CE10005F17B0 /* TFTweetsCollectionView.swift in Sources */,
+				71C2E3BC1C60CB0F005F17B0 /* UIButton+Kingfisher.swift in Sources */,
+				71C2E3B41C60CB0F005F17B0 /* ImageTransition.swift in Sources */,
+				71C2E3B91C60CB0F005F17B0 /* Resource.swift in Sources */,
+				71C2E3B11C60CB0F005F17B0 /* Image.swift in Sources */,
+				71C2E3B51C60CB0F005F17B0 /* ImageView+Kingfisher.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,6 +408,7 @@
 				71C2E3951C5F7C33005F17B0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

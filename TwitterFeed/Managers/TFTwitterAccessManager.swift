@@ -60,7 +60,7 @@ class TFTwitterAccessManager {
         }
     }
     
-    func refreshTwitterFeed(complition:(feed: [TFFeed]!, error: NSError!) -> Void) throws {
+    func refreshTwitterFeed(complition:(feed: [TFTweet]!, error: NSError!) -> Void) throws {
         
         guard let account = account else {
             throw TFTwitterError.NotAuthorizedAccess
@@ -83,12 +83,12 @@ class TFTwitterAccessManager {
                 do {
                     let json = try NSJSONSerialization.JSONObjectWithData(data, options: .AllowFragments)
                     
-                    var result = [TFFeed]()
+                    var result = [TFTweet]()
                     
                     if let items = json as? NSArray {
                         for item in items {
                             if let feedParams = item as? NSDictionary {
-                                result.append(TFFeed(params: feedParams))
+                                result.append(TFTweet(params: feedParams))
                             }
                         }
                     }

@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var tweetListView: TFTweetsCollectionView!
+    
     let twitterManager = TFTwitterAccessManager.sharedInstance
     
     // MARK: - View Lifecircle
@@ -44,8 +46,6 @@ class ViewController: UIViewController {
                     
                     self.refreshTwitterFeed()
                     
-                    print("My account: \(self.twitterManager.account.accountDescription)")
-                    
                 } else {
                     
                     let alert = UIAlertController(title: "Select an account", message: "Please choose one of your Twitter accounts", preferredStyle: .Alert)
@@ -57,8 +57,6 @@ class ViewController: UIViewController {
                             self.twitterManager.account = account
                             
                             self.refreshTwitterFeed()
-                            
-                            print("My account: \(self.twitterManager.account.accountDescription)")
                         }
                         
                         alert.addAction(action)
@@ -75,6 +73,12 @@ class ViewController: UIViewController {
             try twitterManager.refreshTwitterFeed{
                 feed, error in
                 
+                dispatch_async(dispatch_get_main_queue()) {
+                    if let feed = feed {
+                        self.tweetListView.feed = feed
+                    }
+                }
+                
             }
         } catch TFTwitterError.NotAuthorizedAccess {
             self.setupTwitterAccess()
@@ -82,12 +86,5 @@ class ViewController: UIViewController {
             
         }
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
 }
 
