@@ -11,19 +11,39 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet weak var tweetListView: TFTweetsCollectionView!
+    @IBOutlet weak var noDataFoundLabel: UILabel!
     
     let twitterManager = TFTwitterAccessManager.sharedInstance
+    
+    var refreshControl: UIRefreshControl!
     
     // MARK: - View Lifecircle
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupTwitterAccess()
+        tweetListView.alwaysBounceVertical = true
+        
+        refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: "refreshTwitterFeed", forControlEvents: .ValueChanged)
+        refreshControl.attributedTitle = NSAttributedString(string: "Loading...")
+        tweetListView.addSubview(refreshControl)
+        
+        updateData()
     }
     
     
     // MARK: - Private ->
+    
+    private func updateData() {
+        tweetListView.setContentOffset(CGPoint(x: 0, y: -refreshControl.bounds.size.height), animated: true)
+        refreshControl.beginRefreshing()
+        if twitterManager.account != nil { // already signed in
+            refreshTwitterFeed()
+        } else {
+            setupTwitterAccess()
+        }
+    }
     
     private func setupTwitterAccess() {
         twitterManager.accessTwitterAccountsWithComplition {
@@ -68,14 +88,20 @@ class ViewController: UIViewController {
         }
     }
     
-    private func refreshTwitterFeed() {
+    func refreshTwitterFeed() {
         do {
             try twitterManager.refreshTwitterFeed{
                 feed, error in
                 
                 dispatch_async(dispatch_get_main_queue()) {
+                    
+                    self.refreshControl.endRefreshing()
+                    
                     if let feed = feed {
+                        self.noDataFoundLabel.hidden = true
                         self.tweetListView.feed = feed
+                    } else {
+                        self.noDataFoundLabel.hidden = false
                     }
                 }
                 
@@ -85,6 +111,12 @@ class ViewController: UIViewController {
         } catch _ {
             
         }
+    }
+    
+    // MARK: - Actions ->
+    
+    @IBAction func refreshTapped(sender: UIButton) {
+        updateData()
     }
 }
 

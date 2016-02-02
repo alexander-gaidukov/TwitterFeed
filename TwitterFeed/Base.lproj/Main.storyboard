@@ -28,13 +28,22 @@
                                 </collectionViewFlowLayout>
                                 <cells/>
                             </collectionView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No data found! Check your internet connection and try again!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7F7-2u-1Rf">
+                                <rect key="frame" x="8" y="258" width="584" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="mI4-Sx-Dos" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="6xR-m5-v4l"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="mI4-Sx-Dos" secondAttribute="bottom" id="7SO-Km-vKb"/>
                             <constraint firstItem="mI4-Sx-Dos" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="K7O-0M-chT"/>
+                            <constraint firstAttribute="trailing" secondItem="7F7-2u-1Rf" secondAttribute="trailing" constant="8" id="Lne-BM-72g"/>
                             <constraint firstAttribute="trailing" secondItem="mI4-Sx-Dos" secondAttribute="trailing" id="NEM-w4-8mH"/>
+                            <constraint firstItem="7F7-2u-1Rf" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="t7E-4b-OOR"/>
+                            <constraint firstItem="7F7-2u-1Rf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="8" id="uOs-bA-e7e"/>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
@@ -48,9 +57,14 @@
                                 <segment title="Table"/>
                             </segments>
                         </segmentedControl>
-                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="jC2-B5-grI"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="jC2-B5-grI">
+                            <connections>
+                                <action selector="refreshTapped:" destination="BYZ-38-t0r" id="QTD-Ei-d5F"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="noDataFoundLabel" destination="7F7-2u-1Rf" id="2XS-iw-cbe"/>
                         <outlet property="tweetListView" destination="mI4-Sx-Dos" id="EhX-EL-u5K"/>
                     </connections>
                 </viewController>
