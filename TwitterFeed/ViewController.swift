@@ -52,6 +52,9 @@ class ViewController: UIViewController {
             dispatch_async(dispatch_get_main_queue()) {
                 if accounts.count == 0 {
                     
+                    self.refreshControl.endRefreshing()
+                    self.noDataFoundLabel.hidden = false
+                    
                     let alert = UIAlertController(title: "Twitter Error", message: "Make sure you have a Twitter account set up in Settings. Also grant access to this app", preferredStyle: .Alert)
                     
                     let cancel = UIAlertAction(title: "Close", style: .Cancel, handler: nil)
@@ -101,6 +104,7 @@ class ViewController: UIViewController {
                         self.noDataFoundLabel.hidden = true
                         self.tweetListView.feed = feed
                     } else {
+                        self.tweetListView.feed = []
                         self.noDataFoundLabel.hidden = false
                     }
                 }
